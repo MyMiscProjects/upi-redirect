@@ -8,10 +8,10 @@ var data = JSON.parse(decodeBase64(window.location.href.split("/").pop().slice(6
 
 console.log(data)
 
-var amount = data["amount"];
-var payeeId = data["payeeId"];
-var payeeName = data["payeeName"];
-var txnNote = data["txnNote"];
+var amount = encodeURI(data["amount"]);
+var payeeId = encodeURI(data["payeeId"]);
+var payeeName = encodeURI(data["payeeName"]);
+var txnNote = encodeURI(data["txnNote"]);
 
 window.location = `upi://pay?pa=${payeeId}&pn=${payeeName}&am=${amount}&tn=${txnNote}`
 
