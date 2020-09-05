@@ -12,8 +12,9 @@ var amount = encodeURI(data["amount"]);
 var payeeId = encodeURI(data["payeeId"]);
 var payeeName = encodeURI(data["payeeName"]);
 var txnNote = encodeURI(data["txnNote"]);
+var txnRefId = encodeURI(data["txnRefId"])
 
-window.location = `upi://pay?cu=INR&pa=${payeeId}&pn=${payeeName}&am=${amount}&tn=${txnNote}`
+window.location = `upi://pay?cu=INR&pa=${payeeId}&pn=${payeeName}&am=${amount}&tn=${txnNote}&tr=${txnRefId}`
 
 
 </script>
